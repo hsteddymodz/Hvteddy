@@ -529,10 +529,10 @@ reply(`*CONSULTANDO ${command}: ${tesk} 🔍*`)
 consulta = await fetchJson(`http://br3.bronxyshost.com:3048/${command}/${tesk}/teste8`);
 fs.writeFileSync(`./arquivos/database/${command}/${tesk}.txt`, consulta.resultado);
 reply(`${ini}\n\n${consulta.resultado}${fim}`)
+	teddyt.sendDocument(lxrd.chat.id, `./arquivos/database/${command}/${tesk}.txt`)
 } catch (e) {
 console.log(e)
 reply(`Apis caíram ou teve algum erro`)
-teddyt.sendDocument(lxrd.chat.id, `./arquivos/database/${command}/${tesk}.txt`)
 }
 break
 
