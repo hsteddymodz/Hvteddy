@@ -511,7 +511,7 @@ case 'tel1':
 case 'tel2':
 case 'tel3':
 case 'cpf':
-case 'cpf1';
+case 'cpf1':
 case 'cpf2':
 case 'cpf3':
 case 'cpf4':
