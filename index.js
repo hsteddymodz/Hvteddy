@@ -506,14 +506,16 @@ break
 case 'nome':
 case 'parentes':
 case 'beneficios':
+case 'tel':
 case 'tel1':
 case 'tel2':
 case 'tel3':
 case 'cpf':
+case 'cpf1';
 case 'cpf2':
 case 'cpf3':
 case 'cpf4':
-case 'placa1':
+case 'placa':
 case 'cnpj':
 case 'score':
 case 'cpfscore':
@@ -528,8 +530,8 @@ if (!isGroup) return reply(`este comando é só para usuários premiums se você
 reply(`*CONSULTANDO ${command}: ${tesk} 🔍*`)
 consulta = await fetchJson(`http://br3.bronxyshost.com:3048/${command}/${tesk}/teste8`);
 fs.writeFileSync(`./arquivos/database/${command}/${tesk}.txt`, consulta.resultado);
-reply(`${ini}\n\n${consulta.resultado}${fim}`)
 	teddyt.sendDocument(lxrd.chat.id, `./arquivos/database/${command}/${tesk}.txt`)
+reply(`${ini}\n\n${consulta.resultado}${fim}`)
 } catch (e) {
 console.log(e)
 reply(`Apis caíram ou teve algum erro`)
